@@ -81,6 +81,7 @@ char T3::lastMoveLeft(){
 			return '\0';
 }
 
+//evaluates the board
 int T3::evalTTT() {
 	if(this->winX())
 		return 10000;
