@@ -95,10 +95,10 @@ int T3::evalTTT() {
 	int kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->row1[i] == '@')
+		if(this->ttt[ this->row1[i] ] == '@')
 			kO++;
 
-		if(this->row1[i] == 'X')
+		if(this->ttt[ this->row1[i] ] == 'X')
 			kX++;
 	}
 
@@ -110,10 +110,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->row2[i] == '@')
+		if(this->ttt[ this->row2[i] ] == '@')
 			kO++;
 
-		if(this->row2[i] == 'X')
+		if(this->ttt[ this->row2[i] ] == 'X')
 			kX++;
 	}
 
@@ -126,10 +126,10 @@ int T3::evalTTT() {
 
 
 	for(int i = 0; i< 3; i++) {
-		if(this->row3[i] == '@')
+		if(this->ttt[ this->row3[i] ] == '@')
 			kO++;
 
-		if(this->row3[i] == 'X')
+		if(this->ttt[ this->row3[i] ] == 'X')
 			kX++;
 	}
 
@@ -141,10 +141,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->col1[i] == '@')
+		if(this->ttt[ this->col1[i] ] == '@')
 			kO++;
 
-		if(this->col1[i] == 'X')
+		if(this->ttt[ this->col1[i] ] == 'X')
 			kX++;
 	}
 
@@ -156,10 +156,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->col2[i] == '@')
+		if(this->ttt[ this->col2[i] ] == '@')
 			kO++;
 
-		if(this->col2[i] == 'X')
+		if(this->ttt[ this->col2[i] ] == 'X')
 			kX++;
 	}
 
@@ -171,10 +171,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->col3[i] == '@')
+		if(this->ttt[ this->col3[i] ] == '@')
 			kO++;
 
-		if(this->col3[i] == 'X')
+		if(this->ttt[ this->col3[i] ] == 'X')
 			kX++;
 	}
 
@@ -186,10 +186,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->dia1[i] == '@')
+		if(this->ttt[ this->dia1[i] ] == '@')
 			kO++;
 
-		if(this->dia1[i] == 'X')
+		if(this->ttt[this->dia1[i] ] == 'X')
 			kX++;
 	}
 
@@ -201,10 +201,10 @@ int T3::evalTTT() {
 	kX = 0; kO = 0;
 
 	for(int i = 0; i< 3; i++) {
-		if(this->dia2[i] == '@')
+		if(this->ttt[ this->dia2[i] ] == '@')
 			kO++;
 
-		if(this->dia2[i] == 'X')
+		if(this->ttt[ this->dia2[i] ] == 'X')
 			kX++;
 	}
 
@@ -215,7 +215,7 @@ int T3::evalTTT() {
 		countO++;
 	kX = 0; kO = 0;
 	int diff = countX - countO;
-	std::cout << countX << countO << diff << " difference" << std::endl;
+	std::cout << diff << " difference" << std::endl;
 	return countX - countO;
 
 }
